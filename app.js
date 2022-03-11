@@ -22,7 +22,7 @@ productRouter.route("/").get((req,res) => {
 
 productRouter.route("/:id").get((req,res) => {
     const id = req.params.id;
-    res.send("Hello World !!" + id);
+    res.send("Hello World !! I'm product " + id);
 });
 
 app.use("/products", productRouter)
