@@ -20,8 +20,9 @@ productRouter.route("/").get((req,res) => {
     products, );
 });
 
-productRouter.route("/1").get((req,res) => {
-    res.render("products");
+productRouter.route("/:id").get((req,res) => {
+    const id = req.params.id;
+    res.send("Hello World !!" + id);
 });
 
 app.use("/products", productRouter)
