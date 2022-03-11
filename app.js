@@ -4,6 +4,7 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 const productRouter = express.Router();
+
 const app = express();
 const PORT = process.env.PORT;
 
