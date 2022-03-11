@@ -16,13 +16,16 @@ app.set("views","./src/views");
 app.set("view engine", "ejs");
 
 productRouter.route("/").get((req,res) => {
-    res.render("products", 
-    products, );
+    res.render("products", {
+        products, 
+    });
 });
 
 productRouter.route("/:id").get((req,res) => {
     const id = req.params.id;
-    res.send("Hello World !! I'm product " + id);
+    res.render("product", {
+        product: products[id],
+    })
 });
 
 app.use("/products", productRouter)
